@@ -36,12 +36,7 @@ public class PickHorseWindow {
 
 
         RadioButton h1b = new RadioButton("Sunset in Mykonos");
-        // Image h1i = new Image("racehorse.png", 100, 100, false, false);
         h1b.setToggleGroup(horseGroup);
-        // ImageView h1v = new ImageView(h1i);
-        // h1b.setGraphic(h1v);
-
-
         RadioButton h2b = new RadioButton("California Flags");
         // Image h2i = new Image(getClass().getResourceAsStream("../../../../../resources/racehorse.png"));
         // h2b.setGraphic(new ImageView(h2i));
@@ -79,7 +74,7 @@ public class PickHorseWindow {
         VBox horseGroupRoot = new VBox();
         horseGroupRoot.setPadding(new Insets(10));
         horseGroupRoot.setAlignment(Pos.BASELINE_RIGHT);
-        left.getChildren().addAll(imageV, label);
+        left.getChildren().addAll(label, imageV);
         left.setAlignment(Pos.BASELINE_LEFT);
 
         horseGroupRoot.getChildren().addAll(h1b,h2b,h3b,h4b,h5b);
@@ -88,7 +83,7 @@ public class PickHorseWindow {
 
         layout.getChildren().addAll(left, horseGroupRoot);
             
-        Scene pickingScene = new Scene(layout, 300, 250);
+        Scene pickingScene = new Scene(layout, 500, 350);
             
         popupwindow.setScene(pickingScene);
             
